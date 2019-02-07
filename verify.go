@@ -90,7 +90,7 @@ func parseJWT(p string) ([]byte, error) {
 
 func contains(sli []string, ele string) bool {
 	for _, s := range sli {
-		if s == ele {
+		if strings.TrimSpace(s) == strings.TrimSpace(ele) {
 			return true
 		}
 	}
